@@ -60,7 +60,7 @@
         <BaseIcon class="navbar__icon" :name="'question'" />
         <span class="navbar__link-text">Статистика</span>
       </NuxtLink>
-      <button type="button" name="button" class="exit__button" @click="logout()">
+      <button type="button" name="button" class="exit__button" @click="exit()">
         <BaseIcon :name="'exit'" /> <span class="exit__text">Выйти</span>
       </button>
     </div>
@@ -85,7 +85,11 @@ export default {
   methods: {
     ...mapMutations({
       logout: 'user/LOGOUT'
-    })
+    }),
+    exit() {
+      this.logout()
+      this.$router.push({ path: "/"});
+    }
   }
 };
 </script>
