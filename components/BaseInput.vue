@@ -68,4 +68,9 @@ export default {
     color: #6f849c;
   }
 }
+.error {
+  .base-input {
+    border-bottom: 1px solid #D6073D ;
+  }
+}
 </style>

@@ -8,7 +8,7 @@
           :class="{ error: $v.user.firstName.$error }"
           @blur="$v.user.firstName.$touch()"
         /><span class="error-message" v-if="$v.user.firstName.$error"
-          >Это поле необходимо заполнить</span
+          >Пожалуйста заполните поле</span
         >
         <BaseInput
           :label="'Фамилия'"
@@ -16,7 +16,7 @@
           :class="{ error: $v.user.lastName.$error }"
           @blur="$v.user.lastName.$touch()"
         /><span class="error-message" v-if="$v.user.lastName.$error"
-          >Это поле необходимо заполнить</span
+          >Пожалуйста заполните поле</span
         >
       </div>
       <div class="profile__input-group">
@@ -27,7 +27,7 @@
           @blur="$v.user.login.$touch()"
         />
         <span class="error-message" v-if="$v.user.login.$error"
-          >Это поле необходимо заполнить</span
+          >Пожалуйста заполните поле</span
         >
         <BaseInput
           :label="'Сменить пароль'"
@@ -36,7 +36,7 @@
           @blur="$v.user.password.$touch()"
         />
         <span class="error-message" v-if="$v.user.password.$error"
-          >Это поле необходимо заполнить</span
+          >Пожалуйста заполните поле</span
         >
       </div>
     </div>
@@ -141,11 +141,10 @@ export default {
 }
 
 .error {
-  &:focus {
-    border-bottom: 1px solid #bd0d22;
-  }
   &-message {
-    color: #bd0d22;
+    color: #D6073D;
+    margin-top: 8px;
+    font-size: 10px;
   }
 }
 </style>
